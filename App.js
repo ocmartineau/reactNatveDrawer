@@ -1,19 +1,27 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import { Navigation, createDrawerNavigator } from 'react-navigation';
+import { Navigation, createDrawerNavigator, DrawerNavigator } from 'react-navigation';
 import Home from './Screens/Home.js';
-
-export default class App extends React.Component {
+import Socks from './Screens/Socks.js';
+import Boxers from './Screens/Boxers.js';
+import Jeans from './Screens/Jeans.js';
+class App extends React.Component {
     render() {
         return (
-            <View>
-                <Text>We are going to make a drawer</Text>
-            </View>
+            <MyDrawerNavigator/>
         );
     }
 }
 
 
+const MyDrawerNavigator = createDrawerNavigator({
+    Home:Home,
+    Socks:Socks,
+    Boxers:Boxers,
+    Jeans:Jeans
+})
+
+export default App;
 //Navigation.registerComponent('drawer.Home', () => Home);
 //
 //Navigation.startSingleScreenApp({

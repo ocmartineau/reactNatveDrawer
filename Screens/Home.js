@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
+import { Header } from 'react-native-elements';
 
 class Home extends Component {
 
@@ -11,11 +13,12 @@ onButtonPress = () => {
   }
   render () {
     return (
-      <View style={{padding: 50}}>
-        <Text>
-          Home
-        </Text>
-        <Button title="Tab Navigation" onPress = { this.onButtonPress } />
+      <View style={{padding: 25}}>
+        <Header
+
+          centerComponent={{ text: 'Welcome To Your Drawer!', style: { color: '#fff' } }}
+
+        />
       </View>
     );
   }
